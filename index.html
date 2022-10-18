@@ -10,8 +10,16 @@
   <body>
     <header>
       <h1>Conf Bs As</h1>
-      <nav>
+      <nav id="menu">
         <ul>
+          <!----------RESPONSIVE MENU BUTTONS START---------->
+          <li>
+            <a title="menú" href="#menu" class="">&#9776;</a>
+          </li>
+          <li>
+            <a title="cerrar menú" href="#" class="">x</a>
+          </li>
+          <!----------RESPONSIVE MENU BUTTONS END---------->
           <li>
             <a href="./html/conference.html" target="_blank">La conferencia</a>
           </li>
@@ -61,50 +69,66 @@
           <h2>VALOR DE TICKET $200</h2>
         </div>
         <form action="" name="formul">
-            <div class="full-name">
-            <input type="text" placeholder="Nombre" class="lastname">
-            <input type="text" placeholder="Apellido" class="name">
-        </div>
-            <input type="mail" placeholder="Correo" class="email">
-            <div class="description">
-                <p>Cantidad</p>
-                <p class=" category" id="category">Categoría</p>
-            </div>
-            <div class="amount">
-                <input type="number" class="quantity" id="quantity" placeholder="cantidad" value="" name="quantity" required>
-                <select id="students" class="students" name="students"  onchange="ShowSelected()">
-                    <option value="01">Estudiante</option>
-                    <option value="02">Trainee</option>
-                    <option value="03">Junior</option>
-                  </select>
-<!--
+          <div class="full-name">
+            <input type="text" placeholder="Nombre" class="lastname" />
+            <input type="text" placeholder="Apellido" class="name" />
+          </div>
+          <input type="mail" placeholder="Correo" class="email" />
+          <div class="description">
+            <p>Cantidad</p>
+            <p class="category" id="category">Categoría</p>
+          </div>
+          <div class="amount">
+            <input
+              type="number"
+              class="quantity"
+              id="quantity"
+              placeholder="cantidad"
+              value=""
+              name="quantity"
+              required
+            />
+            <select
+              id="students"
+              class="students"
+              name="students"
+              onchange="ShowSelected()"
+            >
+              <option value="01">Estudiante</option>
+              <option value="02">Trainee</option>
+              <option value="03">Junior</option>
+            </select>
+            <!--
                   <select id="producto" name="producto" onchange="ShowSelected();">
                     <option value="12">Texto One</option>
                     <option value="13">Texto Two</option>
                     </select>
                     -->
-
-            </div>
-            <div class="total" id="total">Total a pagar: $</div>
-<div class="buttons">
-    <input id="delete" class="delete" type="button" value="borrar">
-    <input id="abstract" class="abstract" type="button" value="resumen"  onclick="getValueInput()">
-   
-</div>
+          </div>
+          <div class="total" id="total">Total a pagar: $</div>
+          <div class="buttons">
+            <input id="delete" class="delete" type="button" value="borrar" />
+            <input
+              id="abstract"
+              class="abstract"
+              type="button"
+              value="resumen"
+              onclick="getValueInput()"
+            />
+          </div>
         </form>
-       
       </section>
     </main>
     <footer>
-        <ul>
-            <li><a href="">Preguntas frecuentes</a></li>
-            <li><a href="">Contáctanos</a></li>
-            <li><a href="">Prensa</a></li>
-            <li><a href="">Conferencia</a></li>
-            <li><a href="">Términos y condiciones</a></li>
-            <li><a href="">Privacidad</a></li>
-            <li><a href="">Estudiantes</a></li>
-        </ul>
+      <ul>
+        <li><a href="">Preguntas frecuentes</a></li>
+        <li><a href="">Contáctanos</a></li>
+        <li><a href="">Prensa</a></li>
+        <li><a href="">Conferencia</a></li>
+        <li><a href="">Términos y condiciones</a></li>
+        <li><a href="">Privacidad</a></li>
+        <li><a href="">Estudiantes</a></li>
+      </ul>
     </footer>
     <!--
     <script src="./script.js"></script>
