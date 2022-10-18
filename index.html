@@ -8,6 +8,18 @@
     <title>Dom Practice React Codo</title>
   </head>
   <body>
+    <!-- Modal start -->
+    <div id="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>Felicitaciones! Has adquirido tus entradas:</h3>
+      <br />
+      <p>Nombre y Apellido: <span id="firstAndLastName"></span></p>
+      <p>E-mail: <span id="emailAddress"></span></p>
+      <p>Cantidad de entradas: <span id="numberOfTickets"></span></p>
+      <p>Categoría: <span id="category"></span></p>
+      <h4>Total a pagar: $<span id="finalPrice"></span></h4>
+    </div>
+    <!-- Modal end -->
     <header>
       <h1>Conf Bs As</h1>
       <nav id="menu">
@@ -70,10 +82,15 @@
         </div>
         <form action="" name="formul">
           <div class="full-name">
-            <input type="text" placeholder="Nombre" class="lastname" />
-            <input type="text" placeholder="Apellido" class="name" />
+            <input type="text" placeholder="Nombre" class="name" id="name" />
+            <input
+              type="text"
+              placeholder="Apellido"
+              class="lastName"
+              id="lastName"
+            />
           </div>
-          <input type="mail" placeholder="Correo" class="email" />
+          <input type="email" placeholder="Correo" class="email" id="email" />
           <div class="description">
             <p>Cantidad</p>
             <p class="category" id="category">Categoría</p>
@@ -86,14 +103,16 @@
               placeholder="cantidad"
               value=""
               name="quantity"
+              onchange="setQuantity()"
               required
             />
             <select
               id="students"
               class="students"
               name="students"
-              onchange="ShowSelected()"
+              onchange="showSelected()"
             >
+              <option disabled selected value>Seleccionar...</option>
               <option value="01">Estudiante</option>
               <option value="02">Trainee</option>
               <option value="03">Junior</option>
@@ -105,15 +124,17 @@
                     </select>
                     -->
           </div>
-          <div class="total" id="total">Total a pagar: $</div>
+          <div class="total" id="total">
+            Total a pagar: $<span id="totalPrice"></span>
+          </div>
           <div class="buttons">
-            <input id="delete" class="delete" type="button" value="borrar" />
+            <input id="delete" class="delete" type="reset" value="borrar" />
             <input
               id="abstract"
               class="abstract"
               type="button"
               value="resumen"
-              onclick="getValueInput()"
+              onclick="showModal()"
             />
           </div>
         </form>
@@ -133,6 +154,6 @@
     <!--
     <script src="./script.js"></script>
     -->
-    <script src="./functions.js"></script>
+    <script src="./script-alt.js"></script>
   </body>
 </html>

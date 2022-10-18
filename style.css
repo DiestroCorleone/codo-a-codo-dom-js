@@ -40,7 +40,8 @@ nav li:nth-child(2) {
   display: none;
 }
 
-nav li {
+nav li,
+input[type="button"] {
   cursor: pointer;
 }
 
@@ -146,7 +147,7 @@ form {
 }
 
 .name,
-.lastname,
+.lastName,
 .quantity,
 .students {
   width: 49.4%;
@@ -157,7 +158,7 @@ form {
 }
 
 .name,
-.lastname,
+.lastName,
 .email,
 .quantity,
 .students {
@@ -225,6 +226,38 @@ footer ul li {
   padding: 2%;
   display: flex;
   justify-content: space-between;
+}
+
+#modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  align-self: center;
+  margin-top: 10%;
+  background-color: white;
+  width: 50%; /* Full width */
+  height: 30%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  box-shadow: 5px 5px 20px grey;
+  border-radius: 5px;
+  text-align: center;
+  padding: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(141, 170, 67);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 800px) {
